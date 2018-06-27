@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libjson_parser.a  CMakeFiles/json_parser.dir/library.c.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libjson_parser.a
