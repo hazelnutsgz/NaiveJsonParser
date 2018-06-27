@@ -12,7 +12,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cbda96e-debf-45a5-a01f-b9578d7e37c4" name="Default" comment="" />
+    <list default="true" id="5cbda96e-debf-45a5-a01f-b9578d7e37c4" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/naivejson.h" beforeDir="false" afterPath="$PROJECT_DIR$/naivejson.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.c" beforeDir="false" afterPath="$PROJECT_DIR$/test.c" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,20 +36,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.c" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="590">
+              <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+              <folding>
+                <element signature="e#39#57#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="naivejson.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="naivejson.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/naivejson.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="1" column="1" selection-start-column="8" selection-end-line="1" selection-end-column="1" />
+            <state relative-caret-position="448">
+              <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -71,6 +77,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/naivejson.h" />
+        <option value="$PROJECT_DIR$/test.c" />
       </list>
     </option>
   </component>
@@ -126,8 +134,8 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.naivejson_test">
-    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all" />
-    <configuration name="naivejson" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="json_parser" TARGET_NAME="naivejson" CONFIG_NAME="Debug" />
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="json_parser" RUN_TARGET_NAME="naivejson_test" EXPLICIT_BUILD_TARGET_NAME="all" />
+    <configuration name="naivejson" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="json_parser" TARGET_NAME="naivejson" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="json_parser" RUN_TARGET_NAME="naivejson_test" />
     <configuration name="naivejson_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="json_parser" TARGET_NAME="naivejson_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="json_parser" RUN_TARGET_NAME="naivejson_test" />
     <list>
       <item itemvalue="Application.Build All" />
@@ -145,18 +153,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1530087522190</updated>
-      <workItem from="1530087523728" duration="508000" />
+      <workItem from="1530087523728" duration="2137000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="508000" />
+    <option name="totallyTimeSpent" value="2137000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="859" y="0" width="821" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21680877" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1498173" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="CMake" weight="0.32948583" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -189,13 +197,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/naivejson.c">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -207,8 +208,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/naivejson.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="1" selection-start-column="8" selection-end-line="1" selection-end-column="1" />
+        <state relative-caret-position="448">
+          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+          <folding>
+            <element signature="e#39#57#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

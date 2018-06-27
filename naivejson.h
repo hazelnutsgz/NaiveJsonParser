@@ -27,7 +27,7 @@ enum {
 //The parser should not modify the original input string, so we use const identifier
 //The return value is the state of parse.
 int naive_parse(naive_value* v, const char* json);
-
+naive_type naive_get_type(const naive_value* v);
 
 
 #endif
