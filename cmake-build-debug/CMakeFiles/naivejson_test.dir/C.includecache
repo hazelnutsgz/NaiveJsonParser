@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/hashibami/Desktop/2018/编译原理/json_parser/naivejson.h
+
+/Users/hashibami/Desktop/2018/编译原理/json_parser/test.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+naivejson.h
+/Users/hashibami/Desktop/2018/编译原理/json_parser/naivejson.h
+

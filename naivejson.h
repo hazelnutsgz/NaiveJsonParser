@@ -1,6 +1,9 @@
 #ifndef NAIVEJSON_H__
 #define NAIVEJSON_H__
 
+#define EXPECT(c, ch) do { assert(*c->json ==(ch)); c->json++; } while(0)
+
+
 typedef enum {
     NAIVE_NULL,
     NAIVE_FALSE,
@@ -11,9 +14,14 @@ typedef enum {
     NAIVE_OBJECT
 } naive_type;
 
-typedef struct{
+typedef struct {
     naive_type type;
 } naive_value;
+
+typedef struct {
+    const char *json;
+} naive_context;
+
 
 enum {
     NAIVE_PARSE_OK = 0, //NORMAL
@@ -23,11 +31,11 @@ enum {
 };
 
 
-
 //The parser should not modify the original input string, so we use const identifier
 //The return value is the state of parse.
-int naive_parse(naive_value* v, const char* json);
-naive_type naive_get_type(const naive_value* v);
+naive_type naive_parse(naive_value *v, const char *json);
+
+naive_type naive_get_type(const naive_value *v);
 
 
 #endif

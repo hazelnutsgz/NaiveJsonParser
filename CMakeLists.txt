@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 project(json_parser C)
 
 if (CMAKE_C_COMPILER_ID MATCHES "GNU|Clang")
-    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -ansi -pedantic -Wall")
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -pedantic -Wall")
 endif()
 
 add_library(naivejson naivejson.c)

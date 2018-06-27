@@ -1,1 +1,1 @@
-/Library/Developer/CommandLineTools/usr/bin/cc  -ansi -pedantic -Wall -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/naivejson_test.dir/test.c.o  -o naivejson_test libnaivejson.a 
+/Library/Developer/CommandLineTools/usr/bin/cc  -pedantic -Wall -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/naivejson_test.dir/test.c.o  -o naivejson_test libnaivejson.a 
