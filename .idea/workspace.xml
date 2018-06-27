@@ -110,16 +110,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.json_parser">
+  <component name="RunManager" selected="Application.naivejson_test">
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all" />
-    <configuration name="json_parser" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="json_parser" TARGET_NAME="json_parser" CONFIG_NAME="Debug" />
-    <configuration name="leptjson" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="json_parser" TARGET_NAME="leptjson" CONFIG_NAME="Debug" />
-    <configuration name="leptjson_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="json_parser" TARGET_NAME="leptjson_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="json_parser" RUN_TARGET_NAME="leptjson_test" />
+    <configuration name="naivejson" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="json_parser" TARGET_NAME="naivejson" CONFIG_NAME="Debug" />
+    <configuration name="naivejson_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="json_parser" TARGET_NAME="naivejson_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="json_parser" RUN_TARGET_NAME="naivejson_test" />
     <list>
       <item itemvalue="Application.Build All" />
-      <item itemvalue="Application.json_parser" />
-      <item itemvalue="Application.leptjson" />
-      <item itemvalue="Application.leptjson_test" />
+      <item itemvalue="Application.naivejson" />
+      <item itemvalue="Application.naivejson_test" />
     </list>
   </component>
   <component name="SvnConfiguration">

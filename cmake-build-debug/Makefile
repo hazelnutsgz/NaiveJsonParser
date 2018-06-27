@@ -111,70 +111,84 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named leptjson_test
+# Target rules for targets named naivejson_test
 
 # Build rule for target.
-leptjson_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 leptjson_test
-.PHONY : leptjson_test
+naivejson_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 naivejson_test
+.PHONY : naivejson_test
 
 # fast build rule for target.
-leptjson_test/fast:
-	$(MAKE) -f CMakeFiles/leptjson_test.dir/build.make CMakeFiles/leptjson_test.dir/build
-.PHONY : leptjson_test/fast
+naivejson_test/fast:
+	$(MAKE) -f CMakeFiles/naivejson_test.dir/build.make CMakeFiles/naivejson_test.dir/build
+.PHONY : naivejson_test/fast
 
 #=============================================================================
-# Target rules for targets named leptjson
+# Target rules for targets named naivejson
 
 # Build rule for target.
-leptjson: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 leptjson
-.PHONY : leptjson
+naivejson: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 naivejson
+.PHONY : naivejson
 
 # fast build rule for target.
-leptjson/fast:
-	$(MAKE) -f CMakeFiles/leptjson.dir/build.make CMakeFiles/leptjson.dir/build
-.PHONY : leptjson/fast
+naivejson/fast:
+	$(MAKE) -f CMakeFiles/naivejson.dir/build.make CMakeFiles/naivejson.dir/build
+.PHONY : naivejson/fast
 
-#=============================================================================
-# Target rules for targets named json_parser
+naivejson.o: naivejson.c.o
 
-# Build rule for target.
-json_parser: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 json_parser
-.PHONY : json_parser
-
-# fast build rule for target.
-json_parser/fast:
-	$(MAKE) -f CMakeFiles/json_parser.dir/build.make CMakeFiles/json_parser.dir/build
-.PHONY : json_parser/fast
-
-library.o: library.c.o
-
-.PHONY : library.o
+.PHONY : naivejson.o
 
 # target to build an object file
-library.c.o:
-	$(MAKE) -f CMakeFiles/json_parser.dir/build.make CMakeFiles/json_parser.dir/library.c.o
-.PHONY : library.c.o
+naivejson.c.o:
+	$(MAKE) -f CMakeFiles/naivejson.dir/build.make CMakeFiles/naivejson.dir/naivejson.c.o
+.PHONY : naivejson.c.o
 
-library.i: library.c.i
+naivejson.i: naivejson.c.i
 
-.PHONY : library.i
+.PHONY : naivejson.i
 
 # target to preprocess a source file
-library.c.i:
-	$(MAKE) -f CMakeFiles/json_parser.dir/build.make CMakeFiles/json_parser.dir/library.c.i
-.PHONY : library.c.i
+naivejson.c.i:
+	$(MAKE) -f CMakeFiles/naivejson.dir/build.make CMakeFiles/naivejson.dir/naivejson.c.i
+.PHONY : naivejson.c.i
 
-library.s: library.c.s
+naivejson.s: naivejson.c.s
 
-.PHONY : library.s
+.PHONY : naivejson.s
 
 # target to generate assembly for a file
-library.c.s:
-	$(MAKE) -f CMakeFiles/json_parser.dir/build.make CMakeFiles/json_parser.dir/library.c.s
-.PHONY : library.c.s
+naivejson.c.s:
+	$(MAKE) -f CMakeFiles/naivejson.dir/build.make CMakeFiles/naivejson.dir/naivejson.c.s
+.PHONY : naivejson.c.s
+
+test.o: test.c.o
+
+.PHONY : test.o
+
+# target to build an object file
+test.c.o:
+	$(MAKE) -f CMakeFiles/naivejson_test.dir/build.make CMakeFiles/naivejson_test.dir/test.c.o
+.PHONY : test.c.o
+
+test.i: test.c.i
+
+.PHONY : test.i
+
+# target to preprocess a source file
+test.c.i:
+	$(MAKE) -f CMakeFiles/naivejson_test.dir/build.make CMakeFiles/naivejson_test.dir/test.c.i
+.PHONY : test.c.i
+
+test.s: test.c.s
+
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.c.s:
+	$(MAKE) -f CMakeFiles/naivejson_test.dir/build.make CMakeFiles/naivejson_test.dir/test.c.s
+.PHONY : test.c.s
 
 # Help Target
 help:
@@ -182,14 +196,16 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... leptjson_test"
+	@echo "... naivejson_test"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... leptjson"
-	@echo "... json_parser"
-	@echo "... library.o"
-	@echo "... library.i"
-	@echo "... library.s"
+	@echo "... naivejson"
+	@echo "... naivejson.o"
+	@echo "... naivejson.i"
+	@echo "... naivejson.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 

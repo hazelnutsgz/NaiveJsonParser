@@ -1,8 +1,4 @@
 /Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/hashibami/Desktop/2018/编译原理/json_parser
-CMake Error at CMakeLists.txt:12 (target_link_libraries):
-  Cannot specify link libraries for target "leptjson_test" which is not built
-  by this project.
-
-
--- Configuring incomplete, errors occurred!
-See also "/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug

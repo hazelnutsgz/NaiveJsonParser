@@ -17,8 +17,8 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="leptjson_test">
-				<Option output="/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/leptjson_test" prefix_auto="0" extension_auto="0"/>
+			<Target title="naivejson_test">
+				<Option output="/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/naivejson_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -32,14 +32,14 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 leptjson_test"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 naivejson_test"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="leptjson_test/fast">
-				<Option output="/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/leptjson_test" prefix_auto="0" extension_auto="0"/>
+			<Target title="naivejson_test/fast">
+				<Option output="/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/naivejson_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -53,7 +53,7 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 leptjson_test/fast"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 naivejson_test/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -79,8 +79,8 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="leptjson">
-				<Option output="/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/libleptjson.a" prefix_auto="0" extension_auto="0"/>
+			<Target title="naivejson">
+				<Option output="/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/libnaivejson.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
@@ -94,14 +94,14 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 leptjson"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 naivejson"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="leptjson/fast">
-				<Option output="/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/libleptjson.a" prefix_auto="0" extension_auto="0"/>
+			<Target title="naivejson/fast">
+				<Option output="/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/libnaivejson.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
@@ -115,60 +115,21 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 leptjson/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="json_parser">
-				<Option output="/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/libjson_parser.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 json_parser"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="json_parser/fast">
-				<Option output="/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/libjson_parser.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 json_parser/fast"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 naivejson/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/hashibami/Desktop/2018/编译原理/json_parser/library.c">
-			<Option target="json_parser"/>
+		<Unit filename="/Users/hashibami/Desktop/2018/编译原理/json_parser/naivejson.c">
+			<Option target="naivejson"/>
 		</Unit>
-		<Unit filename="/Users/hashibami/Desktop/2018/编译原理/json_parser/library.h">
-			<Option target="json_parser"/>
+		<Unit filename="/Users/hashibami/Desktop/2018/编译原理/json_parser/naivejson.h">
+			<Option target="naivejson"/>
+		</Unit>
+		<Unit filename="/Users/hashibami/Desktop/2018/编译原理/json_parser/test.c">
+			<Option target="naivejson_test"/>
 		</Unit>
 		<Unit filename="/Users/hashibami/Desktop/2018/编译原理/json_parser/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

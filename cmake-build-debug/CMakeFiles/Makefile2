@@ -60,113 +60,76 @@ CMAKE_SOURCE_DIR = /Users/hashibami/Desktop/2018/编译原理/json_parser
 CMAKE_BINARY_DIR = /Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/leptjson_test.dir
+# Target rules for target CMakeFiles/naivejson_test.dir
 
 # All Build rule for target.
-CMakeFiles/leptjson_test.dir/all: CMakeFiles/leptjson.dir/all
-	$(MAKE) -f CMakeFiles/leptjson_test.dir/build.make CMakeFiles/leptjson_test.dir/depend
-	$(MAKE) -f CMakeFiles/leptjson_test.dir/build.make CMakeFiles/leptjson_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/CMakeFiles --progress-num= "Built target leptjson_test"
-.PHONY : CMakeFiles/leptjson_test.dir/all
+CMakeFiles/naivejson_test.dir/all: CMakeFiles/naivejson.dir/all
+	$(MAKE) -f CMakeFiles/naivejson_test.dir/build.make CMakeFiles/naivejson_test.dir/depend
+	$(MAKE) -f CMakeFiles/naivejson_test.dir/build.make CMakeFiles/naivejson_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target naivejson_test"
+.PHONY : CMakeFiles/naivejson_test.dir/all
 
 # Include target in all.
-all: CMakeFiles/leptjson_test.dir/all
+all: CMakeFiles/naivejson_test.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/leptjson_test.dir/rule: cmake_check_build_system
+CMakeFiles/naivejson_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/naivejson_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/leptjson_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/leptjson_test.dir/rule
+.PHONY : CMakeFiles/naivejson_test.dir/rule
 
 # Convenience name for target.
-leptjson_test: CMakeFiles/leptjson_test.dir/rule
+naivejson_test: CMakeFiles/naivejson_test.dir/rule
 
-.PHONY : leptjson_test
-
-# clean rule for target.
-CMakeFiles/leptjson_test.dir/clean:
-	$(MAKE) -f CMakeFiles/leptjson_test.dir/build.make CMakeFiles/leptjson_test.dir/clean
-.PHONY : CMakeFiles/leptjson_test.dir/clean
+.PHONY : naivejson_test
 
 # clean rule for target.
-clean: CMakeFiles/leptjson_test.dir/clean
+CMakeFiles/naivejson_test.dir/clean:
+	$(MAKE) -f CMakeFiles/naivejson_test.dir/build.make CMakeFiles/naivejson_test.dir/clean
+.PHONY : CMakeFiles/naivejson_test.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/naivejson_test.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/leptjson.dir
+# Target rules for target CMakeFiles/naivejson.dir
 
 # All Build rule for target.
-CMakeFiles/leptjson.dir/all:
-	$(MAKE) -f CMakeFiles/leptjson.dir/build.make CMakeFiles/leptjson.dir/depend
-	$(MAKE) -f CMakeFiles/leptjson.dir/build.make CMakeFiles/leptjson.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/CMakeFiles --progress-num= "Built target leptjson"
-.PHONY : CMakeFiles/leptjson.dir/all
+CMakeFiles/naivejson.dir/all:
+	$(MAKE) -f CMakeFiles/naivejson.dir/build.make CMakeFiles/naivejson.dir/depend
+	$(MAKE) -f CMakeFiles/naivejson.dir/build.make CMakeFiles/naivejson.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target naivejson"
+.PHONY : CMakeFiles/naivejson.dir/all
 
 # Include target in all.
-all: CMakeFiles/leptjson.dir/all
+all: CMakeFiles/naivejson.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/leptjson.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/leptjson.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/leptjson.dir/rule
-
-# Convenience name for target.
-leptjson: CMakeFiles/leptjson.dir/rule
-
-.PHONY : leptjson
-
-# clean rule for target.
-CMakeFiles/leptjson.dir/clean:
-	$(MAKE) -f CMakeFiles/leptjson.dir/build.make CMakeFiles/leptjson.dir/clean
-.PHONY : CMakeFiles/leptjson.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/leptjson.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/json_parser.dir
-
-# All Build rule for target.
-CMakeFiles/json_parser.dir/all:
-	$(MAKE) -f CMakeFiles/json_parser.dir/build.make CMakeFiles/json_parser.dir/depend
-	$(MAKE) -f CMakeFiles/json_parser.dir/build.make CMakeFiles/json_parser.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target json_parser"
-.PHONY : CMakeFiles/json_parser.dir/all
-
-# Include target in all.
-all: CMakeFiles/json_parser.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/json_parser.dir/rule: cmake_check_build_system
+CMakeFiles/naivejson.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/json_parser.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/naivejson.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hashibami/Desktop/2018/编译原理/json_parser/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/json_parser.dir/rule
+.PHONY : CMakeFiles/naivejson.dir/rule
 
 # Convenience name for target.
-json_parser: CMakeFiles/json_parser.dir/rule
+naivejson: CMakeFiles/naivejson.dir/rule
 
-.PHONY : json_parser
-
-# clean rule for target.
-CMakeFiles/json_parser.dir/clean:
-	$(MAKE) -f CMakeFiles/json_parser.dir/build.make CMakeFiles/json_parser.dir/clean
-.PHONY : CMakeFiles/json_parser.dir/clean
+.PHONY : naivejson
 
 # clean rule for target.
-clean: CMakeFiles/json_parser.dir/clean
+CMakeFiles/naivejson.dir/clean:
+	$(MAKE) -f CMakeFiles/naivejson.dir/build.make CMakeFiles/naivejson.dir/clean
+.PHONY : CMakeFiles/naivejson.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/naivejson.dir/clean
 
 .PHONY : clean
 
