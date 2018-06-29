@@ -15,6 +15,15 @@ typedef enum {
 } naive_type;
 
 typedef struct {
+    char* s;
+    size_t len;
+    union {
+      struct {
+          char* s; /* string */
+          size_t len;  /* number */
+      }s;
+      double n;
+    }u;
     naive_type type;
 } naive_value;
 
@@ -27,7 +36,8 @@ enum {
     NAIVE_PARSE_OK = 0, //NORMAL
     NAIVE_PARSE_EXPECT_VALUE, //If the json only contains vacuum
     NAIVE_PARSE_INVALID_VALUE,
-    NAIVE_PARSE_ROOT_NOT_SINGULAR //
+    NAIVE_PARSE_ROOT_NOT_SINGULAR,
+    NAIVE_PARSE_NUMBER_TOO_BIG
 };
 
 
@@ -36,6 +46,15 @@ enum {
 naive_type naive_parse(naive_value *v, const char *json);
 
 naive_type naive_get_type(const naive_value *v);
+
+double naive_get_number(const naive_value* v);
+
+static void naive_parse_whitespace(naive_context* c);
+static naive_type naive_parse_null(naive_context* c, naive_value* v);
+static naive_type naive_parse_value(naive_context* c, naive_value* v);
+static int naive_parse_true(naive_context* c, naive_value* v);
+static int naive_parse_false(naive_context* c, naive_value* v);
+static int naive_parse_number(naive_context* c, naive_value* v);
 
 
 #endif
