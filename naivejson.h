@@ -12,7 +12,17 @@ typedef enum {
     NAIVE_OBJECT
 } naive_type;
 
-typedef struct {
+typedef struct naive_value naive_value;
+typedef struct naive_member naive_member;
+
+
+struct naive_member{
+    char* k;        /*key must be a string*/
+    naive_value* v; /*value*/
+    size_t klen;
+};
+
+struct naive_value{
     char* s;
     size_t len;
     union {
@@ -24,10 +34,14 @@ typedef struct {
           naive_type* e;
           size_t size;
       }a;
+      struct {
+        naive_member* m;
+        size_t size;
+      }o;
       double n;
     }u;
     naive_type type;
-} naive_value;
+};
 
 
 
@@ -80,5 +94,12 @@ int naive_get_boolean(const naive_value* v);
 void naive_set_boolean(naive_value* v, int b);
 size_t naive_get_array_size(const naive_value* v);
 static int naive_parse_array(naive_context* c, naive_value* v);
+
+size_t naive_get_object_size(const naive_value* v);
+const char* naive_get_object_key(const naive_value* v, size_t index);
+size_t naive_get_object_key_length(const naive_value* v, size_t index);
+naive_value* naive_get_object_value(const naive_value* v, size_t index);
+static int naive_parse_object(naive_context* c, naive_value* v);
+
 
 #endif

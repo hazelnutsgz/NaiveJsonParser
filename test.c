@@ -169,6 +169,14 @@ static void test_parse_miss_comma_or_square_bracket() {
     TEST_ERROR(NAIVE_PARSE_MISS_COMMA_OR_SQUARE_BRACKET, "[[]");
 }
 
+static void test_parse_object() {
+    naive_value v;
+    naive_init(&v);
+    EXPECT_EQ_INT(NAIVE_PARSE_OK, naive_parse(&v, " { }"));
+    EXPECT_EQ_INT(NAIVE_OBJECT, naive_get_type(&v));
+    naive_free(&v);
+}
+
 static void test_parse() {
     test_parse_null();
     test_parse_true();
@@ -185,6 +193,7 @@ static void test_parse() {
 //
     test_access_string();
     test_parse_miss_comma_or_square_bracket();
+    test_parse_object();
 }
 
 int main() {

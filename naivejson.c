@@ -75,12 +75,13 @@ static naive_type naive_parse_null(naive_context* c, naive_value* v) {
 
 static naive_type naive_parse_value(naive_context* c, naive_value* v) {
     switch (*(c->json)) {
-        case 't':   return naive_parse_true(c, v);
-        case 'f':   return naive_parse_false(c, v);
-        case 'n':   return naive_parse_null(c, v);
+        case 't':   return naive_parse_literal(c, v, "true", NAIVE_TRUE);
+        case 'f':   return naive_parse_literal(c, v, "false", NAIVE_FALSE);
+        case 'n':   return naive_parse_literal(c, v, "null", NAIVE_NULL);
         case '"':   return naive_parse_string(c, v);
         case '\0':  return NAIVE_PARSE_EXPECT_VALUE;
         case '[' :  return naive_parse_array(c, v);
+        case '{' :  return naive_parse_object(c, v);
         default:    return naive_parse_number(c, v);
     }
 }
@@ -141,6 +142,16 @@ static int naive_parse_string(naive_context* c, naive_value* v) {
                 naive_set_string(v, (const char*)naive_context_pop(c, len),len);
                 c->json = p;
                 return NAIVE_PARSE_OK;
+            case '\\':
+                switch (*p++){
+                    case '\"': PUTC(c, '\"'); break;
+                    case '\\': PUTC(c, '\\'); break;
+                    case 'b':  PUTC(c, '\b'); break;
+                    case 'f':  PUTC(c, '\f'); break;
+                    case 'n':  PUTC(c, '\n'); break;
+                    case 'r':  PUTC(c, '\r'); break;
+                    case 't':  PUTC(c, '\t'); break;
+                }
             case '\0':
                 c->top = head;
                 return NAIVE_PARSE_MISS_QUOTATION_MARK;
@@ -215,9 +226,19 @@ naive_value* naive_get_array_element(const naive_value* v, size_t index) {
 }
 
 void naive_free(naive_value* v) {
-    assert(v != NULL);
-    if (v->type == NAIVE_STRING)
-        free(v->u.s.s);
+    size_t i;
+    switch(v->type) {
+        case NAIVE_STRING:
+            free(v->u.s.s);
+            break;
+        case NAIVE_ARRAY:
+            for (i = 0; i < v->u.a.size; i++)
+                naive_free(&v->u.a.e[i]);
+            free(v->u.a.e);
+            break;
+        default:
+            break;
+    }
     v->type = NAIVE_NULL;
 }
 
@@ -270,3 +291,36 @@ void naive_set_number(naive_value* v, double n) {
     v->type = NAIVE_NUMBER;
 }
 
+static int naive_parse_object(naive_context* c, naive_value* v) {
+    size_t size;
+    naive_member m;
+    int ret;
+    EXPECT(c, '{');
+    naive_parse_whitespace(c);
+    if (*c->json == '}') {
+        c->json++;
+        v->type = NAIVE_OBJECT;
+        v->u.o.m = 0;
+        v->u.o.size = 0;
+        return NAIVE_PARSE_OK;
+    }
+    m.k = NULL;
+    size = 0;
+    for (;;){
+        naive_init(&m.v);
+        if ((ret == naive_parse_value(c, &m.v) != NAIVE_PARSE_OK))
+            break;
+        memcpy(naive_context_push(c, sizeof(naive_member)), &m, sizeof(naive_member));
+        size++;
+        m.k = NULL;
+    }
+    return ret;
+}
+
+size_t naive_get_object_key_length(const naive_value* v, size_t index) {
+    return v->u.o.m[index].klen;
+}
+
+naive_value* lept_get_object_value(const naive_value* v, size_t index) {
+    return &v->u.o.m[index].v;
+}
