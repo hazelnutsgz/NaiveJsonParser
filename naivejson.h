@@ -20,10 +20,17 @@ typedef struct {
           char* s; /* string */
           size_t len;  /* number */
       }s;
+      struct {
+          naive_type* e;
+          size_t size;
+      }a;
       double n;
     }u;
     naive_type type;
 } naive_value;
+
+
+
 
 typedef struct {
     const char *json;
@@ -40,7 +47,8 @@ enum {
     NAIVE_PARSE_NUMBER_TOO_BIG,
     NAIVE_PARSE_MISS_QUOTATION_MARK,
     NAIVE_PARSE_INVALID_STRING_ESCAPE,
-    NAIVE_PARSE_INVALID_STRING_CHAR
+    NAIVE_PARSE_INVALID_STRING_CHAR,
+    NAIVE_PARSE_MISS_COMMA_OR_SQUARE_BRACKET
 };
 
 
@@ -67,9 +75,10 @@ static int naive_parse_number(naive_context* c, naive_value* v);
 static int naive_parse_string(naive_context* c, naive_value* v);
 void naive_free(naive_value* v);
 
+
 int naive_get_boolean(const naive_value* v);
 void naive_set_boolean(naive_value* v, int b);
-
-
+size_t naive_get_array_size(const naive_value* v);
+static int naive_parse_array(naive_context* c, naive_value* v);
 
 #endif

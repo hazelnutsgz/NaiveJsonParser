@@ -80,6 +80,7 @@ static naive_type naive_parse_value(naive_context* c, naive_value* v) {
         case 'n':   return naive_parse_null(c, v);
         case '"':   return naive_parse_string(c, v);
         case '\0':  return NAIVE_PARSE_EXPECT_VALUE;
+        case '[' :  return naive_parse_array(c, v);
         default:    return naive_parse_number(c, v);
     }
 }
@@ -168,7 +169,6 @@ naive_type naive_parse(naive_value* v, const char* json) {
             ret = NAIVE_PARSE_ROOT_NOT_SINGULAR;
         }
     }
-    assert(c.top == 0);
     free(c.stack);
     return ret;
 }
@@ -203,7 +203,16 @@ size_t naive_get_string_length(const naive_value* v) {
     return v->u.s.len;
 }
 
+size_t naive_get_array_size(const naive_value* v) {
+    assert(v != NULL && v->type == NAIVE_ARRAY);
+    return v->u.a.size;
+}
 
+naive_value* naive_get_array_element(const naive_value* v, size_t index) {
+    assert(v != NULL && v->type == NAIVE_ARRAY);
+    assert(index < v->u.a.size);
+    return &v->u.a.e[index];
+}
 
 void naive_free(naive_value* v) {
     assert(v != NULL);
@@ -211,3 +220,53 @@ void naive_free(naive_value* v) {
         free(v->u.s.s);
     v->type = NAIVE_NULL;
 }
+
+static int naive_parse_array(naive_context* c, naive_value* v) {
+    size_t size = 0;
+    int ret;
+    EXPECT(c, '[');
+    if (*c->json == ']') {
+        c->json++;
+        v->type = NAIVE_ARRAY;
+        v->u.a.size = 0;
+        v->u.a.e = NULL;
+        return NAIVE_PARSE_OK;
+    }
+    for (;;) {
+        naive_value e;
+        naive_init(&e);
+        if ((ret = naive_parse_value(c, &e)) != NAIVE_PARSE_OK)
+            return ret;
+        memcpy(naive_context_push(c, sizeof(naive_value)), &e, sizeof(naive_value));
+        size++;
+        if (*c->json == ',')
+            c->json++;
+        else if (*c->json == ']') {
+            c->json++;
+            v->type = NAIVE_ARRAY;
+            v->u.a.size = size;
+            size *= sizeof(naive_value);
+            memcpy(v->u.a.e = (naive_value*)malloc(size), naive_context_pop(c, size), size);
+            return NAIVE_PARSE_OK;
+        }
+        else
+            return NAIVE_PARSE_MISS_COMMA_OR_SQUARE_BRACKET;
+    }
+}
+
+int naive_get_boolean(const naive_value* v) {
+    assert(v != NULL && (v->type == NAIVE_TRUE || v->type == NAIVE_FALSE));
+    return v->type == NAIVE_TRUE;
+}
+
+void naive_set_boolean(naive_value* v, int b) {
+    naive_free(v);
+    v->type = b ? NAIVE_TRUE : NAIVE_FALSE;
+}
+
+void naive_set_number(naive_value* v, double n) {
+    naive_free(v);
+    v->u.n = n;
+    v->type = NAIVE_NUMBER;
+}
+

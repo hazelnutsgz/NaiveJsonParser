@@ -87,6 +87,8 @@ static void test_parse_number() {
 //    TEST_NUMBER(1.234E+10, "1.234E+10");
 //    TEST_NUMBER(1.234E-10, "1.234E-10");
 //    TEST_NUMBER(0.0, "1e-10000"); /* must underflow */
+
+
 }
 
 static void test_parse_string() {
@@ -160,6 +162,13 @@ static void test_parse_invalid_string_char() {
     TEST_ERROR(NAIVE_PARSE_INVALID_STRING_CHAR, "\"\x1F\"");
 }
 
+static void test_parse_miss_comma_or_square_bracket() {
+    TEST_ERROR(NAIVE_PARSE_MISS_COMMA_OR_SQUARE_BRACKET, "[1");
+    TEST_ERROR(NAIVE_PARSE_MISS_COMMA_OR_SQUARE_BRACKET, "[1}");
+    TEST_ERROR(NAIVE_PARSE_MISS_COMMA_OR_SQUARE_BRACKET, "[1 2");
+    TEST_ERROR(NAIVE_PARSE_MISS_COMMA_OR_SQUARE_BRACKET, "[[]");
+}
+
 static void test_parse() {
     test_parse_null();
     test_parse_true();
@@ -175,6 +184,7 @@ static void test_parse() {
 //    test_parse_invalid_string_char();
 //
     test_access_string();
+    test_parse_miss_comma_or_square_bracket();
 }
 
 int main() {
