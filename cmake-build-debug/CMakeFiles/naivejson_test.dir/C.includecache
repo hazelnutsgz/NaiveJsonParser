@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 /Users/hashibami/Desktop/2018/编译原理/json_parser/naivejson.h
+stddef.h
+-
 
 /Users/hashibami/Desktop/2018/编译原理/json_parser/test.c
 stdio.h

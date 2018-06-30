@@ -15,6 +15,14 @@ stdio.h
 -
 stdlib.h
 -
+string.h
+-
+errno.h
+-
+math.h
+-
 
 /Users/hashibami/Desktop/2018/编译原理/json_parser/naivejson.h
+stddef.h
+-
 
