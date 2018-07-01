@@ -13,14 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cbda96e-debf-45a5-a01f-b9578d7e37c4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/naivejson.dir/naivejson.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/naivejson.dir/naivejson.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/naivejson_test.dir/test.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/naivejson_test.dir/test.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libnaivejson.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libnaivejson.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/naivejson_test" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/naivejson_test" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/naivejson.c" beforeDir="false" afterPath="$PROJECT_DIR$/naivejson.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/naivejson.h" beforeDir="false" afterPath="$PROJECT_DIR$/naivejson.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.c" beforeDir="false" afterPath="$PROJECT_DIR$/test.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,8 +39,8 @@
       <file leaf-file-name="test.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3568">
-              <caret line="174" column="36" selection-start-line="174" selection-start-column="36" selection-end-line="174" selection-end-column="36" />
+            <state relative-caret-position="199">
+              <caret line="52" column="50" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="50" />
               <folding>
                 <element signature="e#39#57#0" expanded="true" />
               </folding>
@@ -57,8 +51,8 @@
       <file leaf-file-name="naivejson.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/naivejson.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="101" column="64" selection-start-line="101" selection-start-column="64" selection-end-line="101" selection-end-column="64" />
+            <state relative-caret-position="294">
+              <caret line="66" column="43" selection-start-line="66" selection-start-column="43" selection-end-line="66" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -66,8 +60,8 @@
       <file leaf-file-name="naivejson.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/naivejson.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="175" column="39" selection-start-line="175" selection-start-column="39" selection-end-line="175" selection-end-column="39" />
+            <state relative-caret-position="1077">
+              <caret line="372" column="52" selection-start-line="372" selection-start-column="47" selection-end-line="372" selection-end-column="52" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -79,10 +73,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>INVALID_STRING</find>
-      <find>test_parse_invalid_string_escape</find>
-      <find>test_parse_string</find>
-      <find>test_parse_invalid_string_char</find>
       <find>TEST_STRING</find>
       <find>test_parse_number</find>
       <find>test_access_string</find>
@@ -109,6 +99,10 @@
       <find>test</find>
       <find>naive_parse_object</find>
       <find>naive_parse_value</find>
+      <find>naive_parse(</find>
+      <find>naive_context_pop</find>
+      <find>naive_free</find>
+      <find>value</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -119,8 +113,8 @@
       <list>
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/test.c" />
-        <option value="$PROJECT_DIR$/naivejson.c" />
         <option value="$PROJECT_DIR$/naivejson.h" />
+        <option value="$PROJECT_DIR$/naivejson.c" />
       </list>
     </option>
   </component>
@@ -200,18 +194,18 @@
       <option name="presentableId" value="Default" />
       <updated>1530087522190</updated>
       <workItem from="1530087523728" duration="5320000" />
-      <workItem from="1530158684813" duration="31571000" />
+      <workItem from="1530158684813" duration="35228000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36891000" />
+    <option name="totallyTimeSpent" value="40548000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="995" height="1050" extended-state="6" />
+    <frame x="0" y="0" width="1040" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11758794" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1125" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.3296593" />
       <window_info anchor="bottom" id="CMake" order="7" weight="0.32948583" />
@@ -279,27 +273,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/naivejson.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="66" column="43" selection-start-line="66" selection-start-column="43" selection-end-line="66" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3568">
-          <caret line="174" column="36" selection-start-line="174" selection-start-column="36" selection-end-line="174" selection-end-column="36" />
+        <state relative-caret-position="199">
+          <caret line="52" column="50" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="50" />
           <folding>
             <element signature="e#39#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/naivejson.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="101" column="64" selection-start-line="101" selection-start-column="64" selection-end-line="101" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/naivejson.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="175" column="39" selection-start-line="175" selection-start-column="39" selection-end-line="175" selection-end-column="39" />
+        <state relative-caret-position="1077">
+          <caret line="372" column="52" selection-start-line="372" selection-start-column="47" selection-end-line="372" selection-end-column="52" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>

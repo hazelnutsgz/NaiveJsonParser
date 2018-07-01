@@ -236,6 +236,13 @@ void naive_free(naive_value* v) {
                 naive_free(&v->u.a.e[i]);
             free(v->u.a.e);
             break;
+        case NAIVE_OBJECT:
+            for (i = 0; i < v->u.o.size; i++) {
+                free(v->u.o.m[i].k);
+                naive_free(&v->u.o.m[i].v);
+            }
+            free(v->u.o.m);
+            break;
         default:
             break;
     }
@@ -307,13 +314,55 @@ static int naive_parse_object(naive_context* c, naive_value* v) {
     m.k = NULL;
     size = 0;
     for (;;){
+        char* str;
         naive_init(&m.v);
+        /*parse key*/
+
+        memcpy(m.k = (char*)malloc(m.klen + 1), str, m.klen);
+
         if ((ret == naive_parse_value(c, &m.v) != NAIVE_PARSE_OK))
             break;
         memcpy(naive_context_push(c, sizeof(naive_member)), &m, sizeof(naive_member));
-        size++;
+        m.k[m.klen] = '\0';
+        naive_parse_whitespace(c);
+        if (*c->json != ':') {
+            ret = NAIVE_PARSE_MISS_COLON;
+            break;
+        }
+        c->json++;
+        naive_parse_whitespace(c);
+
+        /* parse value */
+        if ((ret = naive_parse_value(c, &m.v)) != NAIVE_PARSE_OK)
+            break;
+        memcpy(naive_context_push(c, sizeof(naive_member)), &m, sizeof(naive_member));
+        size += 1;
         m.k = NULL;
+        naive_parse_whitespace(c);
+        if (*c->json == ','){
+            c->json += 1;
+            naive_parse_whitespace(c);
+        }else if(*c->json == '}') {
+            size_t s = sizeof(naive_member) * size;
+            c->json++;
+            v->type = NAIVE_OBJECT;
+            v->u.o.size = size;
+            memcpy(v->u.o.m = (naive_member*)malloc(s), naive_context_pop(c, s), s);
+            return NAIVE_PARSE_OK;
+        } else {
+            ret = NAIVE_PARSE_MISS_COMMA_OR_CURLY_BRACKET;
+            break;
+        }
     }
+
+    /* Free the memory on the disk*/
+    free(m.k);
+    for (size_t i = 0; i < size; i++) {
+        naive_member* m = (naive_member*)naive_context_pop(c, sizeof(naive_member));
+        free(m->k);
+        naive_free(&m->v);
+    }
+    v->type = NAIVE_NULL;
     return ret;
 }
 
